@@ -29,3 +29,11 @@ while True:
     a = play_quit_leaderboard(player_1, player_with_new_score)
     if a == "end game":
         break
+
+
+
+
+
+
+
+print("helllllo")
