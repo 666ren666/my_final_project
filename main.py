@@ -1,8 +1,10 @@
+
 from login_signin import choose_between_login_and_signin
 from module import Deck
 from war_game_module import Game, is_my_bet_an_int, do_i_have_coins
 from play_quit_leaderboard import play_quit_leaderboard
 
+# todo: adding a PR for my comments . take a look
 # CHOOSE BETWEEN : SIGN IN & LOG IN
 player_1 = choose_between_login_and_signin()
 
@@ -10,7 +12,6 @@ print(f"\n\n\nHello {player_1[1]} \nYou have: {player_1[0]} coins")
 start_game = input("PRESS ENTER TO START")
 
 while True:
-
     # PLACE YOUR BET
     bet = is_my_bet_an_int(player_1)
     player_1[0] = int(player_1[0]) - bet
