@@ -1,6 +1,7 @@
 from pprint import pprint
 
 
+
 def find_top_player():
     with open("player list.csv", "r") as my_file:
         top_list = []

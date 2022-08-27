@@ -1,11 +1,10 @@
-
 from login_signin import choose_between_login_and_signin
 from module import Deck
 from war_game_module import Game, is_my_bet_an_int, do_i_have_coins
 from play_quit_leaderboard import play_quit_leaderboard
 
-# todo: adding a PR for my comments . take a look
 # CHOOSE BETWEEN : SIGN IN & LOG IN
+# todo: adding a PR - please take a look at my comments there
 player_1 = choose_between_login_and_signin()
 
 print(f"\n\n\nHello {player_1[1]} \nYou have: {player_1[0]} coins")
