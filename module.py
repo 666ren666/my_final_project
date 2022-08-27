@@ -16,7 +16,8 @@ class Card:
     def display(self):
         a = 0
         suit_line = 0
-        if self.suit == "Hearts":
+        # if you always display the same self.suit  why do you need so many if statements?
+        if self.suit == "Hearts": 
             suit_line = f"|  {self.suit}  |"
 
         if self.suit == "Spades":
@@ -28,6 +29,9 @@ class Card:
         if self.suit == "Diamonds":
             suit_line = f"| {self.suit} |"
 
+        # same here - seems this code is a bit too complicated. 
+        # You can probably do it much shorter just checking if int(self.value) >= 10
+        # but the output is very nice!
         if self.value == "2" or self.value == "3" or self.value == "4" \
                            or self.value == "5" or self.value == "6" or self.value == "7" \
                            or self.value == "8" or self.value == "9":
