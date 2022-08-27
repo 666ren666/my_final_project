@@ -1,6 +1,7 @@
 from leader_board import find_top_player
 from score_update import update_the_score
 
+# nice work!
 def play_quit_leaderboard(player_1, player_with_new_score):
 
     quit_or_play = ""

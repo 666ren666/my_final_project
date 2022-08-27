@@ -2,6 +2,7 @@ from module import Card
 ############################################################################################################# GAME CLASS
 
 
+
 class Game:
 
     def __init__(self, deck, player_info, bet):
@@ -11,9 +12,14 @@ class Game:
         self.player_2 = []
         self.bet = bet
 
+    # this is a super long function
+    # please break it to several functions
+    # documentation is good. you dont need to document like this ####################
+
     def start_game(self, deck):
         deck.shuffle()
         all_cards = deck.to_list()
+
 
         counter = 1
         for i in range(52):
@@ -33,7 +39,6 @@ class Game:
         while True:
 
 ######################################################################################################### CHECK WHO WINS
-
             if player_1_hand == []:
                 print("YOU LOSE :(")
                 # print(self.player_info)
@@ -59,7 +64,7 @@ class Game:
             a = player_1_hand.pop(-1)
             b = player_2_hand.pop(-1)
 
-            aa = str(a)
+            aa = str(a) # i dont understand why you turn it into STR and then back to card?
             aaa = aa.split(" ")
             ac = Card(aaa[2], aaa[0])
             acc = ac.display()
@@ -82,7 +87,7 @@ class Game:
             # print(b_val)
 
 ########################################################################################################## COMPARE CARDS
-
+            # i would do this in the card class . just implement __lt__, __lt__, __eq__ operators - read on this
             if a_val > b_val:
                 print("YOU WON THE ROUND")
                 player_1_hand.append(a)
@@ -116,12 +121,15 @@ class Game:
                     player_2_hand.append(b)
                     player_2_hand.append(c)
                     player_2_hand.append(d)
+            # what happens if there is a second war
 
 
 def is_my_bet_an_int(player_1):
 
     # check for correct amount of coins
     while True:
+# i dont like the double "while True" .
+# why not check both placed bet and coins in the same loop?
         # check for correct input
         while True:
 
@@ -158,7 +166,7 @@ def is_my_bet_an_int(player_1):
             print("Wrong choice entered, Please try again\n")
             continue
 
-def do_i_have_coins(player_1):
+def do_i_have_coins(player_1): # this can be a class method. if player was a class.
     if 0 >= int(player_1[0]):
         player_1[0] = int(player_1[0]) + 1000
         print("Your coins have been re-filled")

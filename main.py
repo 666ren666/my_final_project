@@ -10,17 +10,17 @@ print(f"\n\n\nHello {player_1[1]} \nYou have: {player_1[0]} coins")
 start_game = input("PRESS ENTER TO START")
 
 while True:
-
     # PLACE YOUR BET
     bet = is_my_bet_an_int(player_1)
-    player_1[0] = int(player_1[0]) - bet
+    player_1[0] = int(player_1[0]) - bet 
+    # why is player not a class? 
 
     # CHECK IF PLAYER IS OUT OF COINS, IF SO: ADD 1000 COINS TO PLAYER
     do_i_have_coins(player_1)
 
     # INITIALIZE THE GAME
-    my_deck = Deck()
-    war = Game(my_deck, player_1, bet)
+    my_deck = Deck() # nice!
+    war = Game(my_deck, player_1, bet) # nice!
 
     # START GAME & UPDATE COINS IN CSV FILE
     player_with_new_score = war.start_game(my_deck)

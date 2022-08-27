@@ -1,5 +1,6 @@
 ####################################################################################### UPDATE SCORE IN PLAYER-LIST FILE
 
+
 def update_the_score(player_with_new_score):
 
     list_of_all_players = []
